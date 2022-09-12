@@ -107,6 +107,8 @@ export default function LoginForm({ setVisible }) {
             <DotLoader color= "#1876f2" loading={loading} size={30} />
             {error && <div className="error_text">{error}</div>}
             {error && <Alert severity="error">{error}</Alert>}   
+//             {error && <div className="error_text">{error}</div>}
+            {error && <Alert severity="error">{error}</Alert>}
             <div className="sign_splitter"></div>
             <button 
                 onClick={() => setVisible(true)} 
