@@ -8,6 +8,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import {Alert } from "@mui/material";
 
 const loginInformation = {
     email: "",
@@ -105,6 +106,7 @@ export default function LoginForm({ setVisible }) {
             </Link>
             <DotLoader color= "#1876f2" loading={loading} size={30} />
             {error && <div className="error_text">{error}</div>}
+            {error && <Alert severity="error">{error}</Alert>}   
             <div className="sign_splitter"></div>
             <button 
                 onClick={() => setVisible(true)} 
